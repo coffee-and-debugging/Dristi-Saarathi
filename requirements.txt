@@ -2,6 +2,7 @@ streamlit
 gTTS
 pyttsx3
 pytesseract
+tesseract
 google.generativeai
 langchain_google_genai
 Pillow

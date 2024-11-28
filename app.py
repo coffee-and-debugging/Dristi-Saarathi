@@ -7,14 +7,11 @@ import google.generativeai as genai
 from langchain_google_genai import GoogleGenerativeAI
 from gtts import gTTS
 
-# Environment Variable Configuration
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
 TESSERACT_PATH = os.getenv('TESSERACT_PATH', r'C:\Program Files\Tesseract-OCR\tesseract.exe')
 
-# Configure Tesseract Path
 pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 
-# Configure Gemini API
 genai.configure(api_key=GEMINI_API_KEY)
 llm = GoogleGenerativeAI(model="gemini-1.5-pro", api_key=GEMINI_API_KEY)
 
@@ -51,8 +48,6 @@ def setup_page():
     """, unsafe_allow_html=True)
 
 def setup_sidebar():
-    """Configure Streamlit sidebar"""
-    # Use relative path for logo
     logo_path = os.path.join(os.path.dirname(__file__), 'assets', 'logo', 'logo.png')
     
     try:
@@ -84,7 +79,6 @@ def setup_sidebar():
     )
 
 def extract_text_from_image(image):
-    """Extract text from image using Tesseract OCR"""
     try:
         return pytesseract.image_to_string(image)
     except Exception as e:
