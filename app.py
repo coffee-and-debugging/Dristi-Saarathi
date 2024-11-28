@@ -6,7 +6,7 @@ import google.generativeai as genai
 from langchain_google_genai import GoogleGenerativeAI
 from gtts import gTTS
 import tempfile
-import config
+# import config
 import os
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
