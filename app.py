@@ -11,7 +11,7 @@ import os
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-GEMINI_API_KEY = st.secrets["api_keys"]["api_key"]
+GEMINI_API_KEY = "AIzaSyDsKw8ewkHgryiERqahAH7ORlod_a8UKrw"
 # GEMINI_API_KEY = config.api_key
 llm = GoogleGenerativeAI(model="gemini-1.5-pro", api_key=GEMINI_API_KEY)
 engine = pyttsx3.init()
