@@ -1,4 +1,5 @@
 streamlit
+gTTS
 pyttsx3
 pytesseract
 google.generativeai
